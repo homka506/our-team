@@ -1,5 +1,6 @@
 @import "normalize";
 @import "layout";
+@import"slick.scss";
 @import url('https://fonts.googleapis.com/css?family=Roboto:900%7CRaleway:400,500');
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,500');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:700');
@@ -196,6 +197,7 @@ textarea {
 		display:flex;
 		justify-content: center;
 		margin-bottom:30px;
+		padding-left:0;
 
 	}
 	.ba-crewman__info {
@@ -274,4 +276,82 @@ textarea {
 }
 .ba-crewman__item--line{
 	margin-bottom: 20px;
+}
+.slick-slide{
+	outline:none;
+}
+.ba-image-slider{
+	margin-bottom:40px;
+}
+.ba-team-slider{
+	margin-bottom:40px;
+	.slick-arrow{
+		position: absolute;
+		z-index:3;
+		top:50%;
+		font-size:0;
+		width:20px;
+		height:42px;
+		padding:0;
+		background: url('data:image/svg+xml,\
+		<svg xmlns="http://www.w3.org/2000/svg" width="20" height="42" viewBox="0 0 366 1024">\
+		<path fill="rgba(255,204,0)" d="M358.286 310.857q0 7.429-5.714 13.143l-224.571 224.571 224.571 224.571q5.714 5.714 5.714 13.143t-5.714 13.143l-28.571 28.571q-5.714 5.714-13.143 5.714t-13.143-5.714l-266.286-266.286q-5.714-5.714-5.714-13.143t5.714-13.143l266.286-266.286q5.714-5.714 13.143-5.714t13.143 5.714l28.571 28.571q5.714 5.714 5.714 13.143z"></path>\
+	</svg>');
+		border:none;
+		&:hover, &:focus{
+			opacity:0.6;
+			outline:none;
+		}
+	}
+	.slick-prev{
+		left:0;
+	}
+	.slick-next{
+		right:0;
+		transform: rotate(180deg)
+	}
+}
+.slick-dots{
+	margin:0;
+	padding:15px 0 0;
+	list-style: none;
+	position: absolute;
+	width:100%;
+	top:100%;
+	display:flex;
+	align-items:center;
+	justify-content: center;
+	li{
+		padding:0 5px;
+	}
+	button{
+		width:15px;
+		height:15px;
+		background: $primary-color;
+		font-size: 0;
+		border:none;
+		border-radius:50%;
+		border:1px solid $primary-color;
+		padding:0;
+	}
+	.slick-active{
+		button{
+			background-color: #fff;
+		}
+	}
+}
+.ba-intro-slider{
+	&__item{
+		background-size: cover;
+		background-position: 50%;
+	}
+}
+.ba-intro {
+	min-height:100vh;
+
+	color:#fff;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
 }

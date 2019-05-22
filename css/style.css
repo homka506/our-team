@@ -474,6 +474,82 @@ body, html {
 .ba-col-1 {
   width: 8.3333%; }
 
+/* Slider */
+.slick-slider {
+  position: relative;
+  display: block;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent; }
+
+.slick-list {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  margin: 0;
+  padding: 0; }
+  .slick-list:focus {
+    outline: none; }
+  .slick-list.dragging {
+    cursor: pointer;
+    cursor: hand; }
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); }
+
+.slick-track {
+  position: relative;
+  left: 0;
+  top: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+  .slick-track:before, .slick-track:after {
+    content: "";
+    display: table; }
+  .slick-track:after {
+    clear: both; }
+  .slick-loading .slick-track {
+    visibility: hidden; }
+
+.slick-slide {
+  float: left;
+  height: 100%;
+  min-height: 1px;
+  display: none; }
+  [dir="rtl"] .slick-slide {
+    float: right; }
+  .slick-slide img {
+    display: block; }
+  .slick-slide.slick-loading img {
+    display: none; }
+  .slick-slide.dragging img {
+    pointer-events: none; }
+  .slick-initialized .slick-slide {
+    display: block; }
+  .slick-loading .slick-slide {
+    visibility: hidden; }
+  .slick-vertical .slick-slide {
+    display: block;
+    height: auto;
+    border: 1px solid transparent; }
+
+.slick-arrow.slick-hidden {
+  display: none; }
+
 body {
   font: 400 14px/1.3 Raleway, sans-serif;
   color: #333; }
@@ -622,7 +698,8 @@ select {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+  padding-left: 0; }
 
 .ba-crewman__info {
   padding: 40px 30px;
@@ -705,5 +782,85 @@ select {
 
 .ba-crewman__item--line {
   margin-bottom: 20px; }
+
+.slick-slide {
+  outline: none; }
+
+.ba-image-slider {
+  margin-bottom: 40px; }
+
+.ba-team-slider {
+  margin-bottom: 40px; }
+  .ba-team-slider .slick-arrow {
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    font-size: 0;
+    width: 20px;
+    height: 42px;
+    padding: 0;
+    background: url('data:image/svg+xml,		<svg xmlns="http://www.w3.org/2000/svg" width="20" height="42" viewBox="0 0 366 1024">		<path fill="rgba(255,204,0)" d="M358.286 310.857q0 7.429-5.714 13.143l-224.571 224.571 224.571 224.571q5.714 5.714 5.714 13.143t-5.714 13.143l-28.571 28.571q-5.714 5.714-13.143 5.714t-13.143-5.714l-266.286-266.286q-5.714-5.714-5.714-13.143t5.714-13.143l266.286-266.286q5.714-5.714 13.143-5.714t13.143 5.714l28.571 28.571q5.714 5.714 5.714 13.143z"></path>	</svg>');
+    border: none; }
+    .ba-team-slider .slick-arrow:hover, .ba-team-slider .slick-arrow:focus {
+      opacity: 0.6;
+      outline: none; }
+  .ba-team-slider .slick-prev {
+    left: 0; }
+  .ba-team-slider .slick-next {
+    right: 0;
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg); }
+
+.slick-dots {
+  margin: 0;
+  padding: 15px 0 0;
+  list-style: none;
+  position: absolute;
+  width: 100%;
+  top: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  .slick-dots li {
+    padding: 0 5px; }
+  .slick-dots button {
+    width: 15px;
+    height: 15px;
+    background: #ffcc00;
+    font-size: 0;
+    border: none;
+    border-radius: 50%;
+    border: 1px solid #ffcc00;
+    padding: 0; }
+  .slick-dots .slick-active button {
+    background-color: #fff; }
+
+.ba-intro-slider__item {
+  background-size: cover;
+  background-position: 50%; }
+
+.ba-intro {
+  min-height: 100vh;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
 
 /*# sourceMappingURL=style.css.map */
